@@ -171,4 +171,9 @@ h3{
 .table :hover{
    background-color: rgb(221, 234, 246);
 }
-  
+ 
+.accordion-button:not(.collapsed) {
+  color: #10b462 !important;
+  background-color: #afffc4 !important;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}

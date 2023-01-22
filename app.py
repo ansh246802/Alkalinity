@@ -18,6 +18,20 @@ def gfg():
         vol = request.form.get("vol")
         vol2 = request.form.get("vol2")
 
+        A = request.form.get("temperature")
+        B = request.form.get("flowfact")
+
+        T = float(A)
+        F = float(B)
+        # variables inputs from the form
+        # T = 25.0  # Temperature degree Celsius
+        # F = 0.85  # Flow Factor
+
+        Cf = 35000.0  # mg / l # Feedwater concentration mg/L
+        Qf = 0.000333333  # Feedwater flow rate m3/s
+
+        N = 4.0  # Number of elements in one pressure vessel
+
         # Main Program
         import math
         import numpy as np
@@ -36,8 +50,8 @@ def gfg():
         # Pure water permeability coefficient at 25 degrees m3/(m2.kg/m.s2)
         A25 = 0.000000000000293333
         B25 = 0.00000000293333  # Solute permeability coefficient at 25 degrees m/s
-        T = 25.0  # Temperature degree Celsius
-        F = 0.85  # Flow Factor
+        # T = 25.0  # Temperature degree Celsius
+        # F = 0.85  # Flow Factor
         Klambda = 2.4  # Pressure vessels and module fittings losses in pressure
 
         """## Input Feedwater Characteristics"""
@@ -241,6 +255,8 @@ def gfg():
                         DeltaPfb = round(DeltaPfb, 2)
                         PfT = PfT + (- DeltaPfb)
                         result.append(r)
+
+        print("\n", T, F)
         return render_template("result.html", result=result)
         # return "<div style='text-align:center;height:100px;width:500px;padding:50px 100px;border:2px solid;border-radius:10px;margin:0 auto;margin-top:200px;'><h2>The Alkalinity is : "+str(120)+" mg/L of CaCO3 </h2></div>"
 

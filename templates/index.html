@@ -127,7 +127,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="temp" style="color:red">Temperature of Permeate:</label>
-                        <input type="number" id="temp" value="25" disabled><span>&nbsp &degC</span>
+                        <input type="number" id="temperature"  name="temperature"><span>&nbsp &degC</span>
                     </div>
                     <div class="col">
                         <label for="vol" style="color:red">Temperature of Permeate:</label>
@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="temp" style="color:red">Fouling Factor:</label>
-                        <input type="number" id="temp" value="0.85" disabled><span>&nbsp &degC</span>
+                        <input type="number" id="flowfact"  name="flowfact"><span>&nbsp &degC</span>
                     </div>
 
                 </div>
@@ -220,15 +220,6 @@
         <div class="tab"><h3>Entire RO system Membrane Configuration</h3>
 
 
-
-
-
-
-
-
-
-
-
             <div class="container-fluid">
                 {% for l in result %}
                     <ul class="list-group">
@@ -243,10 +234,7 @@
         <div class="tab"><h3>Itration Analysis:</h3>
          <!-- <div class="row">
             <div class="col"> -->
-
                 
-
-
               <th align="right" valign="top">
                 <label style="margin-bottom:0px">Analysis Methods:</label>
               </th>
