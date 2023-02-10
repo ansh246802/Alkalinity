@@ -342,7 +342,8 @@ background: #bbb;
     background:var(--red)
 }
 .form-wizard-step.activated{
-	background-image: linear-gradient(138deg, var(--red), var(--blue));
+	/* background-image: linear-gradient(138deg, var(--red), var(--blue)); */
+    background-image: linear-gradient(90deg, #db1818, #3691a3e3);
 }
 
 
