@@ -172,6 +172,7 @@ input[type='radio']:after {
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
+   
 }
 
 input[type='radio']:checked:after {
@@ -251,8 +252,8 @@ input[type='radio']:checked:after {
 }
 
 .form-wizard .btn:hover {
-	background:#f34727; 
-	color: #fff; 
+	background:#f34727 !important; 
+	color: #fff !important; 
     
 	}
 .form-wizard .btn-fixed {
@@ -319,60 +320,39 @@ background: #bbb;
 	overflow: hidden; 
 	position: relative; 
 	margin-top: 20px;
-    height:100px !important;
+    /* height:20% !important; */
+    flex-wrap: wrap;
 
 }
 .form-wizard-step{
-overflow: hidden; 
+    overflow: hidden; 
 	padding-top:10px !important;
 	border:2px solid #fff;
 	background:#ccc;
-    width:32% !important;
+    /* width:33% !important; */
+    /* height: 100% !important; */
+    flex-wrap: wrap;
+
 	-ms-transform: skewX(-30deg); 
     -webkit-transform: skewX(-30deg); 
     transform: skewX(-30deg); 
 }
 .form-wizard-step.active{
-	background-image: linear-gradient(138deg, var(--red), var(--blue));;
+	background-image: linear-gradient(138deg, var(--red), var(--blue));
     background:var(--red)
 }
 .form-wizard-step.activated{
 	background-image: linear-gradient(138deg, var(--red), var(--blue));
 }
-.form-wizard-progress { 
-	position: absolute; 
-	top: 36px;
-	left: 0; 
-	width: 100%; 
-	height: 0px; 
-	background: var(--red);
-}
-.form-wizard-progress-line { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	height: 0px; 
-	background: var(--red); 
-}
 
-.form-wizard-tolal-steps-3 .form-wizard-step { 
+
+.form-wizard-total-steps-3 .form-wizard-step { 
 	position: relative;
-	float: left; 
-	width: 33.33%; 
-	padding: 0 5px; 
-}
-.form-wizard-tolal-steps-4 .form-wizard-step { 
-	position: relative; 
 	float: left; 
 	width: 25%; 
 	padding: 0 5px; 
 }
-.form-wizard-tolal-steps-5 .form-wizard-step { 
-	position: relative;
-	float: left;
-	width: 20%;
-	padding: 0 5px;
-}
+
 
 
 
@@ -480,7 +460,7 @@ overflow: hidden;
     margin: 0;
   }
   
-  /*Range black ⚫ thumb*/
+
   #range-slider__range::-webkit-slider-thumb {
     appearance: none;
     width: 20px;
@@ -546,4 +526,5 @@ input[type=range]:active + output {
   display: block;
   transform: translateX(-50%);
 }
-  
+
+

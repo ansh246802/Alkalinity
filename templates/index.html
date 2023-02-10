@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,9 +14,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/front.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='css/main.js') }}"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
     <nav class="navbar navbar-expand-danger navbar-dark bg-danger">
@@ -45,16 +47,16 @@
     </div>
       </nav>
     <section class="form-box" >
-        <div class="container">
+        <div class="container" style="width:90%">
             
             <!-- <h1>Alkalinity Calculator</h1> -->
             
 
             <div class="row" style="justify-content:center; width:100%;">
-                <div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 " >
-                    <div class="row form-wizard" style="height:47%">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, modi rem. Recusandae reprehenderit expedita voluptates eos, consequatur velit suscipit alias, hic ab saepe esse provident voluptatum. Voluptatum molestiae labore hic.</div>
-                    <div class="row form-wizard" style="height:47%">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit eos, ex expedita veritatis sapiente nulla est accusantium necessitatibus illo et vitae quidem atque qui ad. Corporis alias qui labore at.</div></div>
-                <div class="col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-wizard">
+                <div class="col-sm-8 col-sm-offset-1 col-md-12 col-md-offset-1 col-lg-3 col-lg-offset-1 form-wizard" >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, modi rem. Recusandae reprehenderit expedita voluptates eos, consequatur velit suscipit alias, hic ab saepe esse provident voluptatum. Voluptatum molestiae labore hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quam ea, accusamus voluptas odit, hic unde doloremque ad, modi suscipit sapiente eius iste velit maxime veniam officia consectetur repellat illo.
+                    </div>
+                <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-2 col-lg-7 col-lg-offset-3 form-wizard">
                     <!-- Form Wizard -->
                     <!-- <form role="form" action="" method="post"> -->
 
@@ -64,45 +66,111 @@
                         <!-- <p>Fill all form field to go next step</p> -->
                         
                         <!-- Form progress -->
-                        <div class="form-wizard-steps form-wizard-tolal-steps-4">
-                            <div class="form-wizard-progress">
-                                <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
+                        <div class="container">
+                        <div class="row form-wizard-steps form-wizard-total-steps-3">
+                            <!-- <div class="form-wizard-progress">
+                                <div class="form-wizard-progress-line " data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%; "></div>
+                            </div> -->
+
+                            <div class="col form-wizard-step active">
+                                <!-- <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div> -->
+                                <p>Membrane/Water Type</p>
                             </div>
                             <!-- Step 1 -->
-                            <div class="form-wizard-step active">
+                            <div class="col form-wizard-step ">
                                 <!-- <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div> -->
                                 <p>Membrane Element Characteristics</p>
                             </div>
                             <!-- Step 1 -->
                             
                             <!-- Step 2 -->
-                            <div class="form-wizard-step">
+                            <div class="col form-wizard-step " >
                                 <!-- <div class="form-wizard-step-icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></div> -->
-                                <p>Feed Water Characteristics</p>
+                                <p>Feed Water Characteristics </p>
                             </div>
                             <!-- Step 2 -->
                             
                             <!-- Step 3 -->
-                            <div class="form-wizard-step">
+                            <div class="col form-wizard-step " >
                                 <!-- <div class="form-wizard-step-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div> -->
                                 <p>RO system Membrane Characteristics </p>
                             </div>
                             <!-- Step 3 -->
                             
-                            <!-- Step 4 -->
-                            <!-- <div class="form-wizard-step">
-                                <div class="form-wizard-step-icon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                                <p>Payment</p>
-                            </div> -->
-                            <!-- Step 4 -->
                         </div>
-                        <!-- Form progress -->
+                    </div>
+
                         
+                        <!-- Form progress -->
+                        <fieldset>
+
+                            <h4> <span>Step 1 - 4</span></h4>
+                            <div class="form-group">
+                              <!-- <div class="section over-hide z-bigger"> -->
+                                <input class="checkbox" type="checkbox" name="general" id="general" checked>
+                                <label class="for-checkbox" for="general"></label>
+                                <div class="background-color"></div>
+                                <div class="section over-hide z-bigger">
+                                  <!-- <h1>Alkalinity Calculator</h1> -->
+                                  <div class="container ">
+                                    <div class="row justify-content-center ">
+                                      <div class="col-12">
+                                        <p style="font-weight:bold;color:red">Choose a membrane</p>
+                                      </div>
+                                      <div class="col-12 ">
+                                        <input class="checkbox-tools" type="radio" name="tools" id="tool-1" checked>
+                                        <label class="for-checkbox-tools" for="tool-1">
+                                          <i class='uil uil-line-alt'></i>
+                                          TW
+                                        </label><!--
+                                        --><input class="checkbox-tools" type="radio" name="tools" id="tool-2">
+                                        <label class="for-checkbox-tools" for="tool-2">
+                                          <i class='uil uil-vector-square'></i>
+                                                        BW
+                                        </label><!--
+                                        --><input class="checkbox-tools" type="radio" name="tools" id="tool-3">
+                                        <label class="for-checkbox-tools" for="tool-3">
+                                          <i class='uil uil-ruler'></i>
+                                          SW
+                                        </label>
+                                      </div>
+                                      <div class="col-12">
+                                        <p style="font-weight:bold;color:red">Choose Type of Water</p>
+                                      </div>
+                                      <div class="col-xl-10 ">
+                                        <input class="checkbox-tools" type="radio" name="budget" id="budget-1" checked>
+                                        <label class="for-checkbox-tools" for="budget-1">
+                                          NaCl
+                                        </label><!--
+                                        --><input class="checkbox-tools" type="radio" name="budget" id="budget-2">
+                                        <label class="for-checkbox-tools" for="budget-2">							
+                                         MgSO<sub>4</sub>
+                                        </label><!--
+                                        --><input class="checkbox-tools" type="radio" name="budget" id="budget-3">
+                                        <label class="for-checkbox-tools" for="budget-3">							
+                                         CuSO<sub>4</sub>
+                                        </label>
+                                        
+                                      </div>
+                                      
+                                    </div>
+                                  
+                                  </div>	
+                                <!-- </div> -->
+                              </div>
+                               </div>
+                        
+                            
+                            
+                            <div class="form-wizard-buttons">
+                                <button type="button" class="btn btn-next">Next</button>
+                            </div>
+                        </fieldset>
                         
                         <!-- Form Step 1 -->
                         <fieldset>
 
-                            <h4> <span>Step 1 - 3</span></h4>
+                            <h4> <span>Step 2-4</span></h4>
                             <div class="form-group">
                                 <label>Temperature of Permeate <span>*</span></label></div><div>
                                 <input type="radio" id="temp" class="range"  name="temp"  onclick="enable_tempC()" checked >
@@ -165,6 +233,7 @@
                             
                             
                             <div class="form-wizard-buttons">
+                              <button type="button" class="btn btn-previous">Previous</button>
                                 <button type="button" class="btn btn-next">Next</button>
                             </div>
                         </fieldset>
@@ -173,7 +242,7 @@
                         <!-- Form Step 2 -->
                         <fieldset>
 
-                            <h4> <span>Step 2 - 3</span></h4>
+                            <h4> <span>Step 3 - 4</span></h4>
                             
                             <div class="form-group">
                                 <label>Feed Water Concentration  <span>*</span></label>

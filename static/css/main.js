@@ -224,8 +224,9 @@ $('.image_title input').blur(function() {
 
 
 var slider = document.getElementById("range-slider__range");
+console.log(slider)
 var output = document.getElementById("range-slider__value");
-
+console.log(output)
 output.innerHTML = slider.value;
 
 // This function input current value in span and add progress colour in range
