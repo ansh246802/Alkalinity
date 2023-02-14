@@ -310,3 +310,8 @@ function equateC() {
     }   
 }
 
+function loader() {
+    $('#loading').show();
+    $('.form-wizard').hide();
+} 
+console.log($('#btn-submit'))
