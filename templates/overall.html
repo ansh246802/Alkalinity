@@ -16,6 +16,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ro.png') }}">
+
     <title>Result</title>
   </head>
   <body>
@@ -143,10 +145,17 @@
                                   </tr>
                                   <tr>
                                     <th>Qp(m<sup>3</sup>/s0</th>
-                                    <td name="qp1" id="qp1">{{result[0][6]}}<sup>{{result[0][8]}}</sup></td>
+                                    <!-- <td name="qp1" id="qp1">{{result[0][6]}}<sup>{{result[0][8]}}</sup></td>
                                     <td name="qp2" id="qp2">{{result[1][6]}}<sup>{{result[0][8]}}</sup></td>
                                     <td name="qp3" id="qp3">{{result[2][6]}}<sup>{{result[0][8]}}</sup></td>
-                                    <td name="qp4" id="qp4">{{result[3][6]}}<sup>{{result[0][8]}}</sup></td>
+                                    <td name="qp4" id="qp4">{{result[3][6]}}<sup>{{result[0][8]}}</sup></td> -->
+
+                                    <td name="qp1" id="qp1">{{result[0][6]}}</td>
+                                    <td name="qp2" id="qp2">{{result[1][6]}}</td>
+                                    <td name="qp3" id="qp3">{{result[2][6]}}</td>
+                                    <td name="qp4" id="qp4">{{result[3][6]}}</td>
+
+
                                   </tr>
                                   <tr>
                                     <th>Vfb(m/s)</th>
@@ -509,25 +518,25 @@
             <tr>
               <th scope="row">2</th>
               <td class="att">Recovery of element 1(R<sub>1</sub>)</td>
-              <td name="r1" id="r1">0.1093235</td>
+              <td name="r1" id="r1">{{result[0][0]}}</td>
               <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
               <td class="att">Recovery of element 2(R<sub>2</sub>)</td>
-              <td name="r2" id="r2">0.09268</td>
+              <td name="r2" id="r2">{{result[1][0]}}</td>
               <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
               <td class="att">Recovery of element 3(R<sub>3</sub>)</td>
-              <td name="r3" id="r3">0.0731</td>
+              <td name="r3" id="r3">{{result[2][0]}}</td>
               <td></td>
             </tr>
             <tr>
               <th scope="row">5</th>
               <td class="att">Recovery of element 4(R<sub>4</sub>)</td>
-              <td name="r4" id="r4">0.054</td>
+              <td name="r4" id="r4">{{result[3][0]}}</td>
               <td></td>
             </tr>
             <tr>
@@ -535,7 +544,7 @@
               <td class="att">
                 Total Recovery of all elements(R<sub>calc</sub>)
               </td>
-              <td name="totr" id="totr">0.3291035</td>
+              <td name="totr" id="totr">{{result[-1][0]}}</td>
               <td></td>
             </tr>
 
