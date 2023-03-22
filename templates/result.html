@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ro.png') }}">
     <title>FO_RO System results</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ro.png') }}">    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ro.png') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="{{ url_for('static', filename='css/form.js') }}"></script>
     
     <link
@@ -47,7 +49,18 @@
               </thead>
               <tbody>
                 <tr>
+
                   <th>Value for Rcal</th>
+
+                  {%for i in range(0, len)%}
+
+                  {%for j in range(0, len)%}
+  
+                  <li>{{result[i][j]}}</li>
+
+                  {%endfor%}
+
+
 
                   <td name="rcal1" id="rcal1" >{{result[0][0]}}</td>
                   <td name="rcal2" id="rcal2" >{{result[1][0]}}</td>
