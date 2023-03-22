@@ -20,6 +20,9 @@ def gfg():
         vol = request.form.get("vol")
         vol2 = request.form.get("vol2")
 
+        num=request.form.get("elements") 
+        N=float(num)# Number of elements in one pressure vessel
+        print("\n",N)
         A = request.form.get("temperature")
         B = request.form.get("flowfact")
 
@@ -32,7 +35,7 @@ def gfg():
         Cf = 35000.0  # mg / l # Feedwater concentration mg/L
         Qf = 0.000333333  # Feedwater flow rate m3/s
 
-        N = 4.0  # Number of elements in one pressure vessel
+        # N = 4.0  # Number of elements in one pressure vessel
 
         # Main Program
         import math
@@ -65,7 +68,7 @@ def gfg():
         ## Calculations
         """
         print("Input Membrane Configuration of entire RO System")
-        N = 4.0  # Number of elements in one pressure vessel
+        # N = 4.0  # Number of elements in one pressure vessel
         NPv = 1.0  # Number of pressure vessels in one stage
         Am = Sm * N * NPv  # Total Membrane Area in the entire RO System m2
         VSP = 0.5 * pi * df**2 * lm  # Volume of Spacer m3
@@ -251,14 +254,38 @@ def gfg():
                               PiP, 'kg/ms2')
                         print('value of osmotic pressure gradient (delta pi) :',
                               DeltaPi, 'kg/ms2')
+
                         Cf = Cc
                         Qf = Qc
                         PfT = round(PfT, 2)
                         DeltaPfb = round(DeltaPfb, 2)
                         PfT = PfT + (- DeltaPfb)
                         result.append(r)
+        
+        total_recovery=1-((1-result[0][0])*((1-result[1][0]))*(1-result[2][0])*(1-result[3][0]))
+        total=1
+        for i in range(int(N)):
+            total*=(1-result[i][0])
 
-        print("\n", T, F)
+        total=1-total;
+        # for i in range(4):
+            # print(i)
+            # print(result)
+            # print(result[i][6])
+            # result[i][6]=round(result[i][6],4)
+
+            # # result[i][8]=round(result[i][8],4)
+
+
+            # print(result[i][6])
+
+            # total_recovery*=(1-result[i][0])
+                            
+            # total_recovery=1-total_recovery
+
+        result.append([total])
+
+        print("********************************************\n\n", T, F, N, total)
         return render_template("overall.html", result=result)
         # return "<div style='text-align:center;height:100px;width:500px;padding:50px 100px;border:2px solid;border-radius:10px;margin:0 auto;margin-top:200px;'><h2>The Alkalinity is : "+str(120)+" mg/L of CaCO3 </h2></div>"
 
@@ -268,3 +295,5 @@ def gfg():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
