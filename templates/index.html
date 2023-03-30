@@ -29,7 +29,7 @@
 <body>
     <nav class="navbar navbar-expand-danger navbar-dark bg-danger">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">Alkalinity Calculator</a>
+        <a class="navbar-brand" href="#">FO-RO Hybrid System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,9 +42,7 @@
                 <a class="nav-link" href="#">Version History<span class="sr-only"></span></a>
             </li>
             
-            <li class="nav-item">
-                <a class="nav-link " href="#">Download Results</a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link " href="#">About</a>
             </li>
@@ -110,8 +108,9 @@
                         <!-- Form progress -->
                         <fieldset>
 
-                             <h4> <span>Step 1 - 4</span></h4>
+                            <span style="float:right"> <h4 class="stepNo"> Step 1 - 4</h4></span>
                             <div class="form-group">
+                              <!-- <div style="height:80px"></div> -->
                               <!-- <div class="section over-hide z-bigger"> -->
                                 <input class="checkbox" type="checkbox" name="general" id="general" checked>
                                 <label class="for-checkbox" for="general"></label>
@@ -174,8 +173,9 @@
                         </fieldset>
                         <fieldset>
 
-                            <h4> <span>Step 2-4</span></h4>
+                          <span style="float:right"> <h4 class="stepNo"> Step 2 - 4</h4></span>
                             <div class="form-group">
+                              <div style="height:40px"></div>
                                 <label>Temperature of Permeate <span>*</span></label></div><div>
                                 <input type="radio" id="temp" class="range"  name="temp"  onclick="enable_tempC()" checked >
                                 <input type="text" class="temp" name="temperature"  value="25" onchange="equateK()"id="tempC_text" size="5"  >&nbsp; &#x2103;
@@ -248,9 +248,11 @@
                         <!-- Form Step 2 -->
                         <fieldset>
 
-                            <h4> <span>Step 3 - 4</span></h4>
+                          <span style="float:right"> <h4 class="stepNo"> Step 3 - 4</h4></span>
                             
                             <div class="form-group">
+                              <div style="height:40px"></div>
+                              
                                 <label>Feed Water Concentration  <span>*</span></label>
                                 <input type="text" name="waterConc" id="waterConc"  class="feed" value="35000" placeholder="Feed Water conc" class="form-control required">&nbsp; mg/L
                             </div>
@@ -300,8 +302,9 @@
                         <!-- Form Step 3 -->
                         <fieldset>
 
-                            <h4> <span>Step 4 - 4</span></h4>
+                          <span style="float:right"> <h4 class="stepNo"> Step 1 - 4</h4></span>
                             <div class="form-group" id="fom-group">
+                              <div style="height:40px"></div>
                                 <label>Number of elements in one pressure vessel of Stage 1
                                     <span>*</span></label>
                                 <!-- <input type="text" name="elements" placeholder="Number of elements in one pressure vessel of Stage 1" class="form-control required">

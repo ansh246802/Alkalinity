@@ -550,4 +550,12 @@ input[type=range]:active + output {
   transform: translateX(-50%);
 }
 
+
+.stepNo{
+    font-weight:bold;
+    color: var(--red);
+    margin-top:2px;
+    
+}
+
   
