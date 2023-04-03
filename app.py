@@ -1,6 +1,6 @@
 # importing Flask and other modules
 from flask import Flask, request, render_template
-
+import pandas as pd
 # Flask constructor
 app = Flask(__name__)
 
@@ -284,6 +284,16 @@ def gfg():
             # total_recovery=1-total_recovery
 
         result.append([total])
+        # dictionary of lists  
+        
+
+        # df = pd.DataFrame(result, columns=["colummn"])   
+        # df.to_csv('list.csv', index=False)
+        # np.savetxt("EmployeeData.csv", result, delimiter =", ",fmt ='% s') 
+
+        df = pd.DataFrame(result)
+        df.to_csv('static/Result/file2.csv', index=False, header=False)
+        
 
         print("********************************************\n\n", T, F, N, total)
         return render_template("overall.html", result=result)
