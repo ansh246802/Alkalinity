@@ -292,7 +292,8 @@ def gfg():
         # np.savetxt("EmployeeData.csv", result, delimiter =", ",fmt ='% s') 
 
         df = pd.DataFrame(result)
-        df.to_csv('static/Result/file2.csv', index=False, header=False)
+        df.columns =['Rcal', 'Qf(m3/s)', 'Cf(mg/l)', 'Qc(m3/s)','Cc(mg/l)','Cp(mg/l)','Qp(m3/s0','Vfb(m/s)','Avg feed brine velocity(Vfb)(m/s)','Avg feed brine flow rate(Qb)(m3/s)','Dynamic Viscosity(mu)(kg/ms)','Reynolds Number(Re)','Solute diffusivity(D)(m2/s)','Schmidt Number(Sc)','Mass Transfer coefficient(K)','Permeate Water Flux(Jw)(m3/m2s)','Concentration Polarization(Cp)','Feed water pressure(P)(kg/ms2)','Pressure drop at feed side(deltaP)(kg/ms2)','osmotic pressure on membrane surface(pi M)(kg/ms2)','permeate osmotic pressure(pi P)(kg/ms2)','osmotic pressure gradient(delta pi)(kg/ms2)']
+        df.to_csv('static/Result/Result.csv', index=False)
         
 
         print("********************************************\n\n", T, F, N, total)
